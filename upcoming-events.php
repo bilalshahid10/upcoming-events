@@ -66,7 +66,6 @@ function uep_activation_deactivation() {
 	flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'uep_activation_deactivation' );
-register_deactivation_hook( __FILE__, 'uep_activation_deactivation' );
 
 
 /**
