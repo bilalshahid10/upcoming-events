@@ -58,7 +58,7 @@ add_action( 'init', 'uep_custom_post_type' );
 
 
 /**
- * Flushing rewrite rules on plugin activation/deactivation
+ * Flushing rewrite rules on plugin activation
  * for better working of permalink structure
  */
 function uep_activation_deactivation() {
