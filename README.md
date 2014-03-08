@@ -1,4 +1,4 @@
-upcoming-events
+Upcoming Events
 ===============
 
-A plugin to show a list of upcoming events on the front-end
+A WordPress plugin to show a list of upcoming events on the front-end
