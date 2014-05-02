@@ -10,7 +10,7 @@ class Upcoming_Events extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array(
-			'class'		=>	'uep_upcoming_events',
+			'class'			=>	'uep_upcoming_events',
 			'description'	=>	__( 'A widget to display a list of upcoming events', 'uep' )
 		);
 
@@ -29,7 +29,7 @@ class Upcoming_Events extends WP_Widget {
 	public function form( $instance ) {
 		$widget_defaults = array(
 			'title'			=>	'Upcoming Events',
-			'number_events'		=>	5
+			'number_events'	=>	5
 		);
 
 		$instance  = wp_parse_args( (array) $instance, $widget_defaults );
@@ -90,14 +90,14 @@ class Upcoming_Events extends WP_Widget {
 		);
 
 		$query_args = array(
-			'post_type'		=>	'event',
-			'posts_per_page'	=>	$instance['number_events'],
-			'post_status'		=>	'publish',
+			'post_type'				=>	'event',
+			'posts_per_page'		=>	$instance['number_events'],
+			'post_status'			=>	'publish',
 			'ignore_sticky_posts'	=>	true,
-			'meta_key'		=>	'event-start-date',
-			'orderby'		=>	'meta_value_num',
-			'order'			=>	'ASC',
-			'meta_query'		=>	$meta_quer_args
+			'meta_key'				=>	'event-start-date',
+			'orderby'				=>	'meta_value_num',
+			'order'					=>	'ASC',
+			'meta_query'			=>	$meta_quer_args
 		);
 
 		$upcoming_events = new WP_Query( $query_args );
